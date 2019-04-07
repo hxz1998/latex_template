@@ -12,6 +12,7 @@
 \usepackage{fancyhdr}
 % \usepackage{hyperref}
 \usepackage{listings}
+\usepackage{cite}
 
 \setCJKmainfont[BoldFont=FandolSong-Bold]{FandolSong}
 % \setCJKmainfont[BoldFont = SimHei]{SimSun}
@@ -23,6 +24,7 @@
 \pagestyle{fancy}
 \rhead{}
 % \hypersetup{colorlinks, bookmarks, unicode}
+\renewcommand\refname{参考文献} 
 
 
 \title{\bfseries{这里是标题}}
@@ -33,7 +35,7 @@
 \maketitle
 
 \begin{abstract}
-    摘要
+    摘要\cite{基于GPU的大规模无人机编队控制并行仿真方法}
 \end{abstract}
 \thispagestyle{empty}
 \newpage
@@ -85,7 +87,8 @@
 \end{align}
 \section{总结}
 \newpage
-\section*{参考文献}
+\bibliographystyle{unsrt} 
+\bibliography{refdb} 
 \newpage
 \section*{附录代码}
 \lstset{language=java}
