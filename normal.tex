@@ -1,0 +1,99 @@
+\documentclass[UTF8,12pt]{ctexart}
+\usepackage[left=2.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm]{geometry}
+\usepackage{fontspec}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{bm}
+\usepackage{longtable}
+\usepackage{supertabular}%跨页表格
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{fancyhdr}
+% \usepackage{hyperref}
+\usepackage{listings}
+
+\setCJKmainfont[BoldFont=FandolSong-Bold]{FandolSong}
+% \setCJKmainfont[BoldFont = SimHei]{SimSun}
+\setmainfont{Times New Roman}
+\linespread{1.5}
+\renewcommand{\abstractname}{\textbf{\large{摘\quad 要}}}
+\newcommand{\xiaosi}{\fontsize{12pt}{\baselineskip}}
+\newcommand{\wuhao}{\fontsize{10.5pt}{10.5pt}\selectfont}
+\pagestyle{fancy}
+\rhead{}
+% \hypersetup{colorlinks, bookmarks, unicode}
+
+
+\title{\bfseries{这里是标题}}
+\author{胡小忠}
+% \date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+    摘要
+\end{abstract}
+\thispagestyle{empty}
+\newpage
+\setcounter{page}{1}
+\section{第一部分}
+\subsection{第一部分的子部分}
+子部分子部分子部分子部分子部分子部分子部分子部分
+\begin{enumerate}
+    \item 条目1
+    \item 条目2
+\end{enumerate}
+\section{表格内容}
+    \begin{table}[h]
+        \vspace{20pt}
+        \centering
+        \begin{tabular}{p{2cm}p{6cm}}
+            \hline
+            符号    &   说明 \\
+            \hline       
+            $v$     &   飞行器飞行速度 \\
+            $a$     &   飞行器加速度 \\
+            $t$     &   飞行器加速到某一速度所需时间 \\
+            $df$    &   飞行器直径 \\
+            $c$     &   摩天轮外径周长 \\
+            $d$     &   摩天轮直径 \\
+            \hline
+        \end{tabular}
+    \end{table}
+\section{第二部分}
+\subsection{第二部分的子部分}
+\subsubsection{第二部分的子部分的子部分}
+子部分子部分子部分子部分子部分子部分子部分子部分子部分子部分子部分子部分子部分子部分子部分子部分如图\ref{插图1}
+\begin{figure}[ht]
+    \centering
+    \includegraphics{img/cumt.png}
+    \caption{插图}
+    \label{插图1}
+\end{figure}
+公式：\eqref{公式1}和\eqref{公式2}
+\begin{gather}
+    c_1+C_1+4d=400\\
+    \label{公式1}
+\end{gather}
+\begin{align}
+    S &= (\frac{df\times d}{2})^2 \times \pi\\
+    & = (\frac{0.3 \times 56}{2})^2 \times \pi\\
+    & = 221.7m^2
+    \label{公式2}
+\end{align}
+\section{总结}
+\newpage
+\section*{参考文献}
+\newpage
+\section*{附录代码}
+\lstset{language=java}
+\begin{lstlisting}
+    public class Main {
+        public static void main(String[] args) {
+            System.out.println("Hello World!");
+        }
+    }
+\end{lstlisting}
+\end{document}
